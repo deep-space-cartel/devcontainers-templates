@@ -26,7 +26,7 @@ runs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ env.GITHUB_TOKEN }}
 
     - name: Apply Template, Build & Push Dev Container
       id: apply_template_build_push_dev_container
