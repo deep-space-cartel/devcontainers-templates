@@ -10,11 +10,11 @@
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/github-cli:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/deep-space-cartel/devcontainers-features/starship:1": {},
-        "ghcr.io/deep-space-cartel/devcontainers-features/apt:1": {
+        "ghcr.io/partcad/devcontainers-features/starship:2": {},
+        "ghcr.io/partcad/devcontainers-features/apt:2": {
             "packages": "bash-completion shellcheck mc python3-pip python3-venv" // shfmt
         },
-        "ghcr.io/deep-space-cartel/devcontainers-features/pip:1": {
+        "ghcr.io/partcad/devcontainers-features/pip:2": {
             "packages": "pre-commit",
             "location": "/opt/pip"
         }
@@ -73,7 +73,7 @@
                                 "templates",
                                 "publish",
                                 "--namespace",
-                                "deep-space-cartel/devcontainers-templates",
+                                "partcad/devcontainers-templates",
                                 "src/"
                             ],
                             "group": {
@@ -103,7 +103,7 @@
                                 "templates",
                                 "generate-docs",
                                 "--github-owner",
-                                "deep-space-cartel",
+                                "partcad",
                                 "--github-repo",
                                 "devcontainers-templates",
                                 "--project-folder",
@@ -119,7 +119,7 @@
                 "editor.fontFamily": "'Hack Nerd Font Mono'",
                 "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
                 "files.insertFinalNewline": true,
-                "dotfiles.repository": "deep-space-cartel/dotfiles",
+                "dotfiles.repository": "partcad/dotfiles",
                 "cSpell.enableFiletypes": [
                     "*"
                 ],
