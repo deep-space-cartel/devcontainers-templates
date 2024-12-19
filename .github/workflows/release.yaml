@@ -4,7 +4,7 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.ref == 'refs/heads/main' ||  github.ref == 'refs/heads/transfer'}}
+    if: ${{ github.ref == 'refs/heads/main' ||  github.ref == 'refs/heads/partcad'}}
     runs-on: ubuntu-24.04
     permissions:
       contents: write
