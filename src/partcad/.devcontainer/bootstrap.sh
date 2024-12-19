@@ -8,10 +8,10 @@ set -euo pipefail
 
 WORKSPACE_DIR="${WORKSPACE_DIR:-/workspaces/partcad}"
 
-if ! conda init; then
-  echo "Failed to initialize conda"
-  exit 1
-fi
+# if ! conda init; then
+#   echo "Failed to initialize conda"
+#   exit 1
+# fi
 
 echo "Configuring Git safe directory: ${WORKSPACE_DIR}"
 if ! git config --global --add safe.directory "${WORKSPACE_DIR}"; then
