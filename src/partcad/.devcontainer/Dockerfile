@@ -19,3 +19,7 @@ RUN \
   --mount=type=bind,source=./apt.txt,target=/tmp/apt.txt \
   --mount=type=bind,source=./apt.sh,target=/tmp/apt.sh \
   /tmp/apt.sh
+
+  RUN \
+  --mount=type=bind,source=./bootstrap.sh,target=/tmp/bootstrap.sh \
+  /tmp/bootstrap.sh
