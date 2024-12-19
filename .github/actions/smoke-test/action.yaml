@@ -20,3 +20,8 @@ runs:
       id: test_template
       shell: bash
       run: ${{ github.action_path }}/test.sh  ${{ inputs.template }}
+
+    - name: Apply Template, Build & Push Dev Container
+      id: apply_template_build_push_dev_container
+      shell: bash
+      run: ${{ github.action_path }}/publish.sh  ${{ inputs.template }}

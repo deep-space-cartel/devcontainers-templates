@@ -2,6 +2,10 @@
 
 [![CI - Test Templates](https://github.com/partcad/devcontainers-templates/actions/workflows/test-pr.yaml/badge.svg)](https://github.com/partcad/devcontainers-templates/actions/workflows/test-pr.yaml)
 
+## Packages
+
+- <https://github.com/orgs/partcad/packages?repo_name=devcontainers-templates>
+
 ## Adding Templates to the Index
 
 Next you will need to add your Templates collection to our [public index](https://containers.dev/templates) so that other community members can find them. Just follow these steps once per collection you create:
@@ -25,6 +29,8 @@ find src/ -mindepth 1 -maxdepth 1 -type d | xargs -n1 devcontainer upgrade --wor
 ## Pre-building Images
 
 ### Unobtainium
+
+- https://github.com/partcad/devcontainers-templates/pkgs/container/devcontainers-templates%2Fubik
 
 ```bash
 devcontainer templates apply --template-id  ghcr.io/partcad/devcontainers-templates/ubik --workspace-folder tmp --log-level debug
