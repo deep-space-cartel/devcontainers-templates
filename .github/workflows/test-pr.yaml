@@ -16,6 +16,10 @@ jobs:
             partcad: ./**/partcad/**
 
   test:
+    permissions:
+      contents: write
+      pull-requests: write
+      packages: write
     needs: [detect-changes]
     runs-on: ubuntu-24.04
     continue-on-error: true
