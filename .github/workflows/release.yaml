@@ -4,8 +4,12 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' ||  github.ref == 'refs/heads/transfer'}}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      packages: write
     steps:
       - uses: actions/checkout@v3
 
