@@ -6,24 +6,24 @@
 # -o pipefail: Exit on pipe failures
 set -euo pipefail
 
-WORKSPACE_DIR="${WORKSPACE_DIR:-/workspaces/partcad}"
+# WORKSPACE_DIR="${WORKSPACE_DIR:-/workspaces/partcad}"
 
 # if ! conda init; then
 #   echo "Failed to initialize conda"
 #   exit 1
 # fi
 
-echo "Configuring Git safe directory: ${WORKSPACE_DIR}"
-if ! git config --global --add safe.directory "${WORKSPACE_DIR}"; then
-    echo "Failed to configure Git safe directory. Ensure Git is installed and you have proper permissions."
-    exit 1
-fi
-
-cd "${WORKSPACE_DIR}" || { echo "Failed to change directory to ${WORKSPACE_DIR}. Please verify the directory exists."; exit 1; }
-if ! git config --global --add safe.directory "${WORKSPACE_DIR}"; then
-    echo "Failed to configure Git safe directory"
-    exit 1
-fi
+# echo "Configuring Git safe directory: ${WORKSPACE_DIR}"
+# if ! git config --global --add safe.directory "${WORKSPACE_DIR}"; then
+#     echo "Failed to configure Git safe directory. Ensure Git is installed and you have proper permissions."
+#     exit 1
+# fi
+#
+# cd "${WORKSPACE_DIR}" || { echo "Failed to change directory to ${WORKSPACE_DIR}. Please verify the directory exists."; exit 1; }
+# if ! git config --global --add safe.directory "${WORKSPACE_DIR}"; then
+#     echo "Failed to configure Git safe directory"
+#     exit 1
+# fi
 
 install_allure() {
   local allure_url
@@ -112,7 +112,6 @@ echo "
 ║ Setup Summary ($(date '+%Y-%m-%d %H:%M:%S'))                    ║
 ╚═════════════════════════════════════════════════════════╝
 
-- Workspace: ${WORKSPACE_DIR}
 - Allure: $(allure --version)
 - Pre-commit: $(pre-commit --version)
 - Poetry: $(poetry --version)
