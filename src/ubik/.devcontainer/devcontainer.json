@@ -1,0 +1,75 @@
+{
+	"name": "Unobtainium",
+	"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
+	"remoteEnv": {
+		"WAKATIME_API_KEY": "${localEnv:WAKATIME_API_KEY}",
+		"GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
+		"PATH": "${containerEnv:PATH}:/opt/pip/bin"
+	},
+	"remoteUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/deep-space-cartel/devcontainers-features/starship:1": {},
+		"ghcr.io/deep-space-cartel/devcontainers-features/apt:1": {
+			"packages": "bash-completion shellcheck mc python3-pip python3-venv" // shfmt
+		},
+		"ghcr.io/deep-space-cartel/devcontainers-features/pip:1": {
+			"packages": "pre-commit mkdocs mkdocs-material",
+			"location": "/opt/pip"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontFamily": "'Hack Nerd Font Mono'",
+				"terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+				"files.insertFinalNewline": true,
+				"dotfiles.repository": "deep-space-cartel/dotfiles",
+				"cSpell.enableFiletypes": [
+					"*"
+				],
+				"remote.extensionKind": {
+					"ms-vscode.PowerShell": [
+						"ui"
+					],
+					"1Password.op-vscode": [
+						"ui"
+					]
+				}
+			},
+			"extensions": [
+				"1Password.op-vscode",
+				"Codeium.codeium",
+				"DavidAnson.vscode-markdownlint",
+				"GitHub.vscode-codeql",
+				"GitHub.vscode-github-actions",
+				"GitHub.vscode-pull-request-github",
+				"mads-hartmann.bash-ide-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"streetsidesoftware.code-spell-checker",
+				"WakaTime.vscode-wakatime",
+				"yzhang.markdown-all-in-one"
+			],
+			"tasks": {
+				"version": "2.0.0",
+				"tasks": [
+					{
+						"label": "pre-commit: manual",
+						"type": "shell",
+						"command": "pre-commit",
+						"args": [
+							"run",
+							"--hook-stage",
+							"manual"
+						],
+						"group": {
+							"kind": "test",
+							"isDefault": true
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+    "id": "ubik",
+    "version": "1.0.0",
+    "name": "Unobtainium",
+    "description": "One size, fits all.",
+    "documentationURL": "https://github.com/deep-space-cartel/devcontainers-templates/tree/main/src/ubik",
+    "licenseURL": "https://github.com/deep-space-cartel/devcontainers-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "bullseye",
+                "buster"
+            ],
+            "default": "bullseye"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
