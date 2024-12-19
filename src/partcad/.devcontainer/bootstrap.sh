@@ -100,12 +100,12 @@ fi
 # Log installed version
 echo "Poetry version: $(poetry --version)"
 
-# Install Git LFS
-echo "Installing Git LFS..."
-if ! curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash; then
-  echo "Failed to add Git LFS repository"
-  exit 1
-fi
+# # Install Git LFS
+# echo "Installing Git LFS..."
+# if ! curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash; then
+#   echo "Failed to add Git LFS repository"
+#   exit 1
+# fi
 
 echo "
 ╔═════════════════════════════════════════════════════════╗
