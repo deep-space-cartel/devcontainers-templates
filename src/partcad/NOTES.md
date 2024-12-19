@@ -3,6 +3,7 @@
 <!-- markdownlint-enable MD037 -->
 ### Tools
 
+* `allure`
 * `conda` v24.5.0
 * `gh` v2.63.2
 * `git-lfs` v3.6.0

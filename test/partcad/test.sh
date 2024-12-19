@@ -8,6 +8,9 @@ echo "HOME: $HOME"
 echo "OP_CONFIG_DIR: $OP_CONFIG_DIR"
 echo "PRE_COMMIT_HOME: $PRE_COMMIT_HOME"
 
+check "allure" [ "$(command -v allure)" ]
+echo "allure version: $(allure --version)"
+
 check "conda" [ "$(command -v conda)" ]
 check "gh" [ "$(command -v gh)" ]
 check "git-lfs" [ "$(command -v git-lfs)" ]
