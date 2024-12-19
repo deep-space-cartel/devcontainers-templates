@@ -84,21 +84,21 @@ install_component() {
     fi
 }
 
-install_component "poetry export plugin" "poetry self add poetry-plugin-export"
-# Verify poetry plugin installation
-if ! poetry self show plugins | grep -q "poetry-plugin-export"; then
-    echo "Poetry plugin verification failed"
-    exit 1
-fi
-install_component "poetry multiproject plugin" "poetry self add poetry-multiproject-plugin"
-# Verify poetry plugin installation
-if ! poetry self show plugins | grep -q "poetry-multiproject-plugin"; then
-    echo "Poetry plugin verification failed"
-    exit 1
-fi
+# install_component "poetry export plugin" "poetry self add poetry-plugin-export"
+# # Verify poetry plugin installation
+# if ! poetry self show plugins | grep -q "poetry-plugin-export"; then
+#     echo "Poetry plugin verification failed"
+#     exit 1
+# fi
+# install_component "poetry multiproject plugin" "poetry self add poetry-multiproject-plugin"
+# # Verify poetry plugin installation
+# if ! poetry self show plugins | grep -q "poetry-multiproject-plugin"; then
+#     echo "Poetry plugin verification failed"
+#     exit 1
+# fi
 
-# Log installed version
-echo "Poetry version: $(poetry --version)"
+# # Log installed version
+# echo "Poetry version: $(poetry --version)"
 
 # # Install Git LFS
 # echo "Installing Git LFS..."
@@ -113,9 +113,6 @@ echo "
 ╚═════════════════════════════════════════════════════════╝
 
 - Allure: $(allure --version)
-- Pre-commit: $(pre-commit --version)
-- Poetry: $(poetry --version)
-- Plugins: $(poetry self show plugins)
 
 ╔═════════════════════════════════════════════════════════╗
 ║ Dev container post-create setup completed successfully. ║
