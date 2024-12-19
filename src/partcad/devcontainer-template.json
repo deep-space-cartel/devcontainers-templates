@@ -1,5 +1,5 @@
 {
-    "id": "devcontainer-partcad",
+    "id": "partcad",
     "version": "1.0.0",
     "name": "PartCAD: Dev Container [base:bookworm]",
     "description": "Collaborative Assembly & Design",
