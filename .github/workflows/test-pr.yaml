@@ -13,6 +13,7 @@ jobs:
         with:
           filters: |
             ubik: ./**/ubik/**
+            partcad: ./**/partcad/**
 
   test:
     needs: [detect-changes]
